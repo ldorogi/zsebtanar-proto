@@ -13,7 +13,19 @@ if (__CONFIG__.sentry.dsn) {
     dsn: __CONFIG__.sentry.dsn,
     environment: 'prototype',
     maxBreadcrumbs: 10,
+<<<<<<< HEAD
     ignoreErrors: ['top.GLOBALS']
+||||||| constructed merge base
+    ignoreErrors: ['top.GLOBALS', 'originalCreateNotification', 'canvas.contentDocument', 'MyApp_RemoveAllHighlights', 'http.ts://tt.epicplay.com', 'Can\'t find variable: ZiteReader', 'jigsaw is not defined', 'ComboSearch is not defined', 'http.ts://loading.retry.widdit.com/', 'atomicFindClose', 'fb_xd_fragment', 'bmi_SafeAddOnload', 'EBCallBackMessageReceived', 'conduitPage'],
+=======
+    ignoreErrors: [
+      'top.GLOBALS',
+      'originalCreateNotification',
+      'canvas.contentDocument',
+      'fb_xd_fragment',
+      'bmi_SafeAddOnload'
+    ]
+>>>>>>> zsebtanar-proto-356 Visszajelzés belépési kísérlet után
   })
 }
 

@@ -10,6 +10,7 @@ import {
   pipe,
   sortBy,
   toPairs,
+<<<<<<< HEAD
   merge,
   propEq,
   not,
@@ -17,6 +18,11 @@ import {
   lens,
   pathOr,
   Lens
+||||||| constructed merge base
+  merge
+=======
+  merge, propEq, not
+>>>>>>> zsebtanar-proto-356 Visszajelzés belépési kísérlet után
 } from 'ramda'
 
 export const idEq = propEq('id')
@@ -90,6 +96,7 @@ export const reduceP = curry(function reducePF(fn, init, arr) {
 })
 
 export const fMerge = flip(merge)
+<<<<<<< HEAD
 
 export const idNotEq = curry<string, any, boolean>(
   pipe(
@@ -118,3 +125,8 @@ export const reduceToObj = (fn, array: any[], init: any = undefined) =>
 export const lensPathOr = curry<any, string[], Lens>((defVal, p) =>
   lens(pathOr(defVal, p), assocPath(p))
 )
+||||||| constructed merge base
+=======
+
+export const idNotEq = curry(pipe(propEq('id'), not))
+>>>>>>> zsebtanar-proto-356 Visszajelzés belépési kísérlet után

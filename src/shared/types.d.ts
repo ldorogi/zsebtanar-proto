@@ -40,9 +40,16 @@ declare namespace state {
   interface App {
     session: Session
     sideNav: SideNav
+<<<<<<< HEAD
     modal: AppModal
     classifications: Classifications
     notifications: Notifications
+||||||| constructed merge base
+    modal: AppModal
+=======
+    modal: AppModal,
+    notifications: Notifications
+>>>>>>> zsebtanar-proto-356 Visszajelzés belépési kísérlet után
   }
 
   interface Task {
@@ -96,6 +103,7 @@ declare namespace state {
     modalComponent: () => Promise<any>
     parameters: any
   }
+<<<<<<< HEAD
 
   interface Notifications {
     list: Notification[]
@@ -135,6 +143,20 @@ declare namespace state {
     name: string
     file: File
   }
+||||||| constructed merge base
+=======
+
+  interface Notifications {
+    list: Notification[]
+  }
+
+  interface Notification {
+    id: string
+    type: NotificationType
+    message: string,
+    options: NotificationOptions
+  }
+>>>>>>> zsebtanar-proto-356 Visszajelzés belépési kísérlet után
 }
 
 declare namespace DB {
@@ -368,6 +390,7 @@ interface FractionNumber {
   numerator: number
   denominator: number
 }
+<<<<<<< HEAD
 
 declare interface NotificationOptions {
   timeout?: number
@@ -391,3 +414,22 @@ type DispatchProp<Fn> = Fn extends (
 ) => (...dispatchArgs: unknown[]) => infer Return
   ? (...args: Args) => Return
   : never
+||||||| constructed merge base
+=======
+
+declare const enum NotificationType {
+  Primary,
+  Secondary,
+  Success,
+  Danger,
+  Warning,
+  Info,
+  Light,
+  Dark
+}
+
+declare interface NotificationOptions {
+  timeout?: number
+  description?: string
+}
+>>>>>>> zsebtanar-proto-356 Visszajelzés belépési kísérlet után

@@ -23,9 +23,16 @@ export function initAuthWatch(store) {
   AUTH.onAuthStateChanged(function(user) {
     if (user) {
       store.dispatch({ type: SIGN_IN_SUCCESS, payload: { user } })
+<<<<<<< HEAD
       store.dispatch(
         addNotification('success', 'Sikeres bejelentkezés.', { timeout: 3 })
       )
+||||||| constructed merge base
+=======
+      store.dispatch(
+        addNotification(NotificationType.Success, 'Sikeres bejelentkezés.', { timeout: 3 })
+      )
+>>>>>>> zsebtanar-proto-356 Visszajelzés belépési kísérlet után
       store.dispatch(getUserAction(user.uid))
       store.dispatch(parseTokenAction(user))
     } else {

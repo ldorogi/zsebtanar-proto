@@ -35,8 +35,15 @@
     "@types/react-redux": "^6.0.6",
     "@types/react-router": "^4.0.30",
     "algoliasearch": "3.30.0",
+<<<<<<< HEAD
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
+||||||| constructed merge base
+    "axios": "0.18.0",
+=======
+    "axios": "0.18.0",
+    "classnames": "^2.2.6",
+>>>>>>> zsebtanar-proto-356 Visszajelzés belépési kísérlet után
     "cookie-parser": "1.4.3",
     "cors": "2.8.4",
     "express": "4.16.3",
